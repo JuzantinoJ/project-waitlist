@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  width: 360px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#inputfield {
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+#addToDo {
+  height: 30px;
+  border: 1px solid black;
+  vertical-align: middle;
+  font-size: 20px;
+  text-align: center;
+}
+
+#toDoContainer {
+  border: 1px solid black;
+  vertical-align: middle;
+  font-size: 20px;
+  text-align: center;
+}
+
+.paragraph-styling {
+  border: 1px solid black;
+  margin: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
