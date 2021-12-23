@@ -1,50 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Oswald:wght@300&family=Waterfall&family=Zen+Kurenaido&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.container {
-  width: 360px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  font-family: "Oswald", sans-serif;
 }
 
 body {
+  background-image: url(https://www.limestone.com/wp-content/uploads/2017/04/Marble-with-the-classic-marble-look-of-powder-white-and-grey-veins.jpg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 5px 5px 12px white, 5px 5px 12px black;
+}
+
+#info {
+  border: none;
+  background-color: white;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: inset 5px 5px 12px white, 5px 5px 12px black;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: inset 5px 5px 12px white, 5px 5px 12px black;
+}
+
+#name-input,
+#number-input {
+  height: 50px;
+  width: 400px;
+  background-color: white;
+  box-shadow: inset -5px -5px 12px white, inset 5px 5px 12px rgb(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 20px;
+  color: grey;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+#number-input[type="number"]::-webkit-inner-spin-button,
+#number-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+#submit-button {
+  height: 48px;
+  width: 48px;
+  background-color: white;
+  box-shadow: -5px -5px 12px white, 5px 5px 12px rgb(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+#addContacts {
+  text-align: center;
+  font-size: 40px;
+  background: white;
+  box-shadow: -5px -5px 12px white, 5px 5px 12px rgb(0, 0, 0, 0.5);
+  border: none;
+  height: 50%;
+  width: 100%;
+  border-radius: 50px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#logo {
+  background-color: white;
+  box-shadow: -5px -5px 12px white, 5px 5px 12px rgb(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: black;
+    background-image: url(https://image.freepik.com/free-photo/marble-tile-durable-material-background_1253-850.jpg);
+  }
+  #container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #submit-button {
+    display: block;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-left: 130px;
+    font-size: 16px;
+  }
+  #submit-button:hover {
+    background-color: rgb(187, 187, 187);
+  }
+
+  #logo {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 30px;
+  }
+  #addContacts {
+    font-size: 20px;
+    border: 1px solid black;
+  }
+
+  #addContacts div {
+    padding: 5px;
+    margin: 5px;
+    text-decoration: underline;
+  }
+}
+/* body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: plum;
 }
 
-#inputfield {
-  width: 200px;
-  height: 30px;
-  border: 1px solid black;
-  vertical-align: middle;
+#info {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 10px dashed black;
+  background: plum;
+}
+
+#cupcake {
+  text-align: center;
+  font-size: 10rem;
+}
+.input {
+  padding: 3rem;
+  background: rgb(191, 26, 191);
+  margin: 0.5rem;
+  color: white;
   font-size: 30px;
-}
-
-#addToDo {
-  height: 30px;
-  border: 1px solid black;
-  vertical-align: middle;
-  font-size: 20px;
   text-align: center;
-}
-
-#toDoContainer {
-  border: 1px solid black;
-  vertical-align: middle;
-  font-size: 20px;
-  text-align: center;
-}
-
-.paragraph-styling {
-  border: 1px solid black;
-  margin: 0;
   cursor: pointer;
-  font-size: 20px;
 }
+#addContacts {
+  border: 10px solid black;
+  text-align: center;
+  font-size: 30px;
+  background: white;
+}
+
+#container {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+
+#name {
+  margin: 5px;
+  width: 300px;
+  height: 50px;
+  background: white;
+  text-align: center;
+}
+
+#submit-button {
+  background: white;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+  #name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+} */
