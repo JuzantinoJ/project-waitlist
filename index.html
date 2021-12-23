@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>To do list</title>
+
+ <title>Waitlist App</title>
  <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
- <h1>To do list</h1>
-<div class="container">
- <input type="text" id="inputfield">
- <input type='button' id='addToDo' value="Submit">
- <br>
- <br>
- <br>
- <div class="to-do" id="toDoContainer"></div>
-</div>
-<script src="/app.js"></script>
+ <div id="info">
+  <img id="logo" src="https://site0837.g.shopcadacdn.com/sites/files/site0837/logo/tikylogonew4.png ">
+  </img>
+  <h1>Tiky Mochi Cafe Wait List</h1>
+  <form id="container">
+   <input type='text' id='name-input' placeholder="Name">
+   <input type='number' id='number-input' placeholder="Number">
+   <input type="button" class="submit-btn" id="submit-button" value="Add">
+  </form>
+  <br>
+  <div>
+   <h2>Waiting List</h2>
+   <div id="addContacts"></div>
+  </div>
+ </div>
+ <script src="/app.js"></script>
 </body>
+
 </html>
